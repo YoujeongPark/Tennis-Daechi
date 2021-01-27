@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "대치유수지 예매",
+  "description": "대치유수지 예매",
+  "version": "1.1.0",
+  "permissions": [
+    "http://xn--vk1b79znxd34c61h.kr/sub01/*"
+  ],
+  "icons": {
+    "96": "icon96.png"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "matches": [
+        "http://xn--vk1b79znxd34c61h.kr/sub01/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "web_accessible_resources": [],
+  "browser_action": {
+    "default_title": "telegram",
+    "default_popup": "popup.html"
+  }
+}

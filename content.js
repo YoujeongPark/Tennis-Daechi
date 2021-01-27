@@ -1,7 +1,3 @@
-let uid = 1;
-const MAIN_URI =
-  "http://xn--vk1b79znxd34c61h.kr/sub01/01.asp?NowRequestToDay=202011&ftype=2";
-
 let weekdaysFlag = false;
 let weekendsFlag = false;
 
@@ -191,15 +187,6 @@ const reload = () => {
 };
 
 (() => {
-  // if (
-  //   !document.querySelector(
-  //     "#sub > article > div.content_wrap > div.con_tit > h3"
-  //   ) ||
-  //   !location.href.startsWith(MAIN_URI)
-  // ) {
-  //   return;
-  // }
-  console.log("reloaded");
   const isStartedWeekdays = sessionStorage.getItem("macro") === "weekdays"; // 평일
   const isStartedWeekends = sessionStorage.getItem("macro") === "weekends"; // 주말
 

@@ -12,15 +12,13 @@ const playSound = () => {
 };
 
 const sendTelegramMessage = (message) => {
-  const botToken = "1036522490:AAEUPb5tbuwBNkIsN8sR5sVDnia-LWz2NUw";
-  const chatId = -366771557;
-
-  if (!botToken || !chatId) {
+  if (!process.env.botToken || !process.env.chatId) {
     return;
   }
 
   const msg = encodeURI(message);
-  const url = `https://api.telegram.org/bot${botToken}/sendmessage?chat_id=${chatId}&text=${msg}`;
+  // 개인 botToken, chatId를 .env 파일에 작성해야함.
+  const url = `https://api.telegram.org/bot${process.env.botToken}/sendmessage?chat_id=${process.env.chatId}&text=${msg}`;
 
   fetch(url);
 };
