@@ -48,7 +48,7 @@ const macroWeekdays = () => {
       return;
     }
     $rows.forEach(($row) => {
-      var arr = Array.prototype.slice.call($rows); // Now it's an Array.
+      var arr = Array.prototype.slice.call($rows);
       const idx = arr.indexOf($row);
       console.log(idx + "th 일");
       // 가능 버튼만
@@ -128,7 +128,8 @@ const macroWeekends = () => {
     }
 
     $weekends.forEach(($row) => {
-      var arr = Array.prototype.slice.call($weekends); // Now it's an Array.
+      var arr = Array.prototype.slice.call($weekends);
+      d;
       const idx = arr.indexOf($row);
       console.log(idx + "일");
 
